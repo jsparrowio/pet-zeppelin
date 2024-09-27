@@ -1,1 +1,0 @@
-const myDoc = document;
