@@ -29,7 +29,13 @@ h2 {
 /* Everything between comment lines is the custom CSS I added. Feel free to play around with it or change it to fit whatever framework we decide to use */
 /* //////////////////////////////////////////////////////// */
 header {
-    margin-bottom: 40px;
+    padding-bottom: 20px;
+}
+
+.logo h1 {
+ position: relative;
+ top: 20px;
+ left: 10px;
 }
 
 #posts {
@@ -47,5 +53,5 @@ header {
 /* //////////////////////////////////////////////////////////// */
 
 #mainnav a {
-    font-size: 2rem;
+    margin: 1rem;
 }
