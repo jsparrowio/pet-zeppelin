@@ -7,18 +7,21 @@
     <link rel="stylesheet" href="./assets/css/style.css"/>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./assets/scripts/tailwind.config"></script>
-    <title>Default Front End Site</title>
+    <title>PetZeppelin!</title>
 </head>
 <body>
-    <header>
-        <h1 class="text-3xl font-bold underline text-clifford">
-            Hello world!
-          </h1>        
-        <nav id = "mainnav">
+    <header id="mainheader" class="flex flex-row bg-gradient-to-r from-cyan-500 to-blue-500 border-b-4">
+            <div class="logo flex flex-auto bg-contain bg-no-repeat w-24 h-20" style="background-image: url(./assets/images/logo.png);">
+                <h1 class ="justify-end self-end">PetZeppelin</h1>
+            </div>
+        <nav id = "mainnav" class="flex flex-auto justify-center self-end">
             <a href="#">Home</a>
+            <a href="#">Profile</a>
+            <a href="#">Feed</a>
         </nav>
+        <div id = "userinfo" class="flex flex-auto justify-end self-end">Welcome! Please log in!</div>
     </header>
-    <main>
+    <main class ="flex flex-column bg-thepurple">
         <section>
             <h2>Main content!</h2>
             <p>A paragraph!</p>
@@ -27,7 +30,7 @@
             </ul>
         </section>
     </main>
-    <footer>
+    <footer class = "bg-gradient-to-r from-cyan-500 to-blue-500 border-b-4">
             <p>&copy; 2024</p>
     </footer>
     <script src="./assets/scripts/index.js"></script>

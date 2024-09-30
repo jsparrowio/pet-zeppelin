@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assets/scripts/tailwind.config"></script>
+</head>
+<body class="
+    bg-gradient-to-r from-thelightblue to-thedarkblue via-themediumblue1
+">
+    <header id="mainheader" class="flex flex-row bg-gradient-to-r from-cyan-500 to-blue-500 border-b-4">
+        <div class="logo flex flex-auto bg-contain bg-no-repeat w-24 h-20" style="background-image: url(./assets/images/logo.png);">
+            <h1 class ="justify-end self-end">PetZeppelin</h1>
+        </div>
+        <nav id = "mainnav" class="flex flex-auto justify-center self-end">
+            <a href="#">Home</a>
+            <a href="#">Profile</a>
+            <a href="#">Feed</a>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <main class="
+         pt-24 flex flex-column
+    ">
+        <!-- floating flex panel for login submission-->
+        <div id="loginbox" class="
+                    flex-none scale-150 basis-72 m-auto w-64
+                    text-center
+                    border-solid border-4 border-thepurple rounded-xl shadow-2xl
+                    bg-thedarkblue" >
+            <aside>
+                <p>Get Ready for the Zeppelin</p>
+            </aside>
+            <form class="
+                
+            ">
+                <label for="loginUsername" class="text-white">Username:</label>
+                <br>
+                <input type="Text" id="loginUsername" class="text-center">
+                <br>
+                <label for="loginPassword" class="text-white">Password:</label>
+                <br>
+                <input type="text" id="loginPassword" class="text-center">
+                <br>
+                <!--set hover toggle for button background gradient-->
+                <input type="submit" value="Let's go!" id="loginSubmit" class="
+                    border-solid border-2 rounded-xl px-2 mt-2 mb-2 
+                    hover:bg-white  bg-gradient-to-r from-thepurple to-thedarkblue
+                    text-white
+                    
+                    
+                ">
+            </form>
+
+        </div>
+        <!--Images need to shrink while staying in line with footer. fix flex box.-->
+        <div class="flex-none">
+            <img src="./assets/images/omgcats.png" alt="3 Cats looking very suprised that you haven't signed up for PetZeppelin!"
+            id="omgcats" class="
+                absolute scale-75 bottom-0 left-0 -mb-9 z-0
+            ">
+            <img src="./assets/images/omgcats1.png" alt="3 Cats looking absolutely bewildered that you haven't signed up and posted your pet on PetZeppelin!"
+            id="omgcats1" class="
+                absolute scale-75 bottom-0 right-0 -mb-9 z-0
+            ">
+        </div>
+    </main>
+    <footer class = "bg-gradient-to-r from-cyan-500 to-blue-500 border-b-4 mt-80">
+        <p>&copy; 2024</p>
+    </footer>
+</body>
+</html>
