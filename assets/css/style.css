@@ -28,7 +28,7 @@ h2 {
 
 /* Everything between comment lines is the custom CSS I added. Feel free to play around with it or change it to fit whatever framework we decide to use */
 /* //////////////////////////////////////////////////////// */
-header {
+/* header {
     margin-bottom: 40px;
 }
 
@@ -43,7 +43,7 @@ header {
 #postPet {
     margin-top: 40px;
     margin-bottom: 40px;
-}
+} */
 /* //////////////////////////////////////////////////////////// */
 
 #mainnav a {
