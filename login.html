@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Log In - PetZeppelin!</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -30,13 +30,16 @@
         <table class="
             m-auto
         ">
-            <tr>
-                <td>Post your pet, dummy!</td>
-            </tr>
+            <div class="postDropdown">
+                <tr>
+                    <td>Post your pet, dummy!</td>
+                    <td><button type="button" id="postDropdownButton" class="border-2 rounded-full m-auto p-2">Post!</button></td>
+                </tr>
+            </div>
             <div>
                 <tr>
                     <td>Title:</td>
-                    <td><input type="text" value="Woof Woof!" id="postTitle" class="text-thepurple rounded-md mb-2"></td>
+                    <td><input type="text" value="Woof Woof!" id="postTitle" class="text-thepurple rounded-md ms-2"></td>
                 </tr>
                 <tr>
                     <td>Your Pet!</td>
@@ -66,8 +69,7 @@
                 <img src="./assets/images/logo.png" alt="the PetZeppelin logo">
                 <p>Welcome to the Dog House.</p>
             </aside>
-            <form class="
-            ">
+            <form>
                 <label for="loginUsername" class="text-white">Username:</label>
                 <br>
                 <input type="Text" id="loginUsername" class="text-center bg-thelightblue rounded-xl">
@@ -86,25 +88,24 @@
                     
                 ">
             </form>
-
         </div>
+        <br>
+        <br>
+        <br>
         <!--Images need to shrink while staying in line with footer. fix flex box.-->
-        <div class=" omgcats z-10">
+        <div class="flex-none">
             <img src="./assets/images/omgcats.png" alt="3 Cats looking very suprised that you haven't signed up for PetZeppelin!"
-            id="omgcats0" class="
-                scale-75 
-                fixed bottom-0 right-0
-                
+            id="omgcats" class="
+                absolute scale-75 bottom-0 left-0 -mb-12 z-0
             ">
             <img src="./assets/images/omgcats1.png" alt="3 Cats looking absolutely bewildered that you haven't signed up and posted your pet on PetZeppelin!"
             id="omgcats1" class="
-                scale-75 
-                fixed bottom-0 left-0
-                
+                absolute scale-75 bottom-0 right-0 -mb-12 z-0
             ">
         </div>
     </main>
-    <footer class = "fixed bottom-0 bg-gradient-to-r from-cyan-500 to-blue-500 border-b-4 mt-80 text-center">
+    <footer class = " m-auto bg-gradient-to-r from-cyan-500 to-blue-500 border-b-4 z-20">
+        <br>
         <p>&copy; 2024</p>
     </footer>
     <script src="./assets/scripts/login.js"></script>
