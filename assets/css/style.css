@@ -26,6 +26,17 @@ h2 {
     margin-bottom: 50px;
 }
 
+#postbar, #collapsepostsbutton {
+    background-color: white;
+    height: fit-content
+}
+
+#collapsepostsbutton {
+    border-left: 2px solid black;
+  
+}
+
+
 /* Everything between comment lines is the custom CSS I added. Feel free to play around with it or change it to fit whatever framework we decide to use */
 /* //////////////////////////////////////////////////////// */
 /* header {
