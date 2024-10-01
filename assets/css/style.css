@@ -25,7 +25,50 @@ h2 {
     font-size: 2rem;
     margin-bottom: 50px;
 }
+.alertWarning {
+    margin: 0 auto;
+    margin-top: 1rem;
+    width: fit-content;
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    border-radius: 25rem;
+  }
 
+  .alertSuccess {
+    margin: 0 auto;
+    margin-top: 1rem;
+    width: fit-content;
+    padding: 20px;
+    background-color: #24de13;
+    color: white;
+    border-radius: 25rem;
+  }
+
+  .alertCaution {
+    margin: 0 auto;
+    margin-top: 1rem;
+    width: fit-content;
+    padding: 20px;
+    background-color: #e1900d;
+    color: white;
+    border-radius: 25rem;
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
 /* Everything between comment lines is the custom CSS I added. Feel free to play around with it or change it to fit whatever framework we decide to use */
 /* //////////////////////////////////////////////////////// */
 /* header {
