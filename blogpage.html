@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assets/scripts/tailwind.config"></script>
+    <title>Pet Zeppelin Blog Page</title>
+</head>
+
+<body class="
+bg-gradient-to-r from-thelightblue to-thedarkblue via-themediumblue1
+">
+<header id="mainheader" class="flex flex-row bg-gradient-to-r from-cyan-500 to-blue-500 border-b-4">
+    <div class="logo flex flex-auto bg-contain bg-no-repeat w-24 h-20" style="background-image: url(./assets/images/logo.png);">
+        <h1 class ="justify-end self-end">PetZeppelin</h1>
+    </div>
+    <nav id = "mainnav" class="flex flex-auto justify-center self-end">
+        <a href="#">Home</a>
+        <a href="#">Profile</a>
+        <a href="#">Feed</a>
+    </nav>
+</header>
+    <div id="postsDiv"></div>
+        <span id="postbar" class="width-60 h-20">Posts</span><span><button id="collapsepostsbutton">v</button></span>
+        <div id="posts" class="visible"></div>
+</body>
+
+</html>

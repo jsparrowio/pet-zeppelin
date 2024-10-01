@@ -45,6 +45,7 @@ h2 {
     border-radius: 25rem;
   }
 
+
   .alertCaution {
     margin: 0 auto;
     margin-top: 1rem;
@@ -69,6 +70,19 @@ h2 {
   .closebtn:hover {
     color: black;
   }
+
+#postbar, #collapsepostsbutton {
+    background-color: white;
+    height: fit-content
+}
+
+#collapsepostsbutton {
+    border-left: 2px solid black;
+  
+}
+
+
+
 /* Everything between comment lines is the custom CSS I added. Feel free to play around with it or change it to fit whatever framework we decide to use */
 /* //////////////////////////////////////////////////////// */
 /* header {
@@ -92,4 +106,7 @@ h2 {
 #mainnav a {
     margin: 1rem;
 }
+
+/* Media Screens for login */
+
 
