@@ -23,24 +23,41 @@
             <a href="#">Feed</a>
         </nav>
     </header>
+    <div class="postTable">
+        <table>
+            <h2>Post Your Pet, dummy!</h2>
+            <tr>
+                <td>Title:</td>
+                <td><input type="text" value="Woof Woof!" id="postTitle"></td>
+            </tr>
+            <tr>
+                <td>Your Pet!</td>
+                <td><input type="text" value="Please use a static link!" id="postImage"></td>
+            </tr>
+            <tr>
+                <td>What's Up?</td>
+                <td><input type="text"></td>
+            </tr>
+        </table>
+    </div>
     <br>
     <br>
     <br>
     <main class="
-         pt-24 flex flex-column
+         pt-24
     ">
         <!-- floating flex panel for login submission-->
         <div id="loginbox" class="
                     flex-none scale-150 basis-72 m-auto w-64
                     text-center
                     border-solid border-4 border-thepurple rounded-xl shadow-2xl
-                    bg-thedarkblue" >
+                    bg-thedarkblue
+                    focus:z-50" >
             <aside>
                 <img src="./assets/images/logo.png" alt="the PetZeppelin logo">
                 <p>Welcome to the Dog House.</p>
             </aside>
             <form class="
-                
             ">
                 <label for="loginUsername" class="text-white">Username:</label>
                 <br>
@@ -63,14 +80,18 @@
 
         </div>
         <!--Images need to shrink while staying in line with footer. fix flex box.-->
-        <div class="shrink">
+        <div class=" omgcats z-10">
             <img src="./assets/images/omgcats.png" alt="3 Cats looking very suprised that you haven't signed up for PetZeppelin!"
-            id="omgcats" class="
-                fixed scale-75 bottom-0 left-0 -mb-9 z-0
+            id="omgcats0" class="
+                scale-75 
+                fixed bottom-0 right-0
+                
             ">
             <img src="./assets/images/omgcats1.png" alt="3 Cats looking absolutely bewildered that you haven't signed up and posted your pet on PetZeppelin!"
             id="omgcats1" class="
-                fixed scale-75 bottom-0 right-0 -mb-9 z-0
+                scale-75 
+                fixed bottom-0 left-0
+                
             ">
         </div>
     </main>
