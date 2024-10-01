@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Hangar</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assets/scripts/tailwind.config"></script>
     <script defer src="./assets/scripts/profile.js"></script>
 </head>
 
@@ -16,12 +17,20 @@
         <h1>PetZeppelin</h1>
     </header>
 </body>
-    <main>
-        <div id="posts">
-            <h2>Pet Hangar</h2>
-            <h3 id="noPets">You don't have any posts yet!</h3>
-            <!-- TODO: Add JS logic to open textbox and image insert field -->
-            <button id="postPet">Click here to post your furry friend!</button>
-        </div>
-    </main>
+<main>
+    <div id="posts">
+        <h2>Pet Hangar</h2>
+        <h3 id="noPets">You don't have any posts yet!</h3>
+        <!-- TODO: Add JS logic to open textbox and image insert field -->
+        <button id="postPet">Click here to post your furry friend!</button>
+        <!-- <button id="submitPet">
+            <style>
+                submitPet {
+                    display: none;
+                }
+            </style>
+        </button> -->
+    </div>
+</main>
+
 </html>
