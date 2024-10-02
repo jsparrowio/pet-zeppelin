@@ -1,9 +1,15 @@
 const postsEl = myDoc.getElementById('posts');
 const submitButton = myDoc.getElementById('postSubmit');
+const populateDummies = true; // SET TO FALSE IF YOU WANT TO REMOVE DUMMY POSTS
 
 function renderPosts(){
-    // TODO: Clear all elements attached to main?
     const blogPosts = readPosts(); // get list of post objects from local storage
+    if(populateDummies){
+        const dummyPost = JSON.parse(fetch('./assets/scripts/dummyposts.JSON'));
+        for(dummy in dummyPost){
+            blogPosts.push(dummy);
+        }
+    };
     for(postsObj in blogPosts){
         buildPost(postsObj);
     }
@@ -62,7 +68,7 @@ function buildPost(blogPost){
         postsEl.appendChild(articleEl);
     }
 
-}
+};
 
 submitButton.addEventListener('submit', submitPost);
 //TODO add event listner for submit button on post
