@@ -25,7 +25,17 @@ bg-gradient-to-r from-thelightblue to-thedarkblue via-themediumblue1
             <a href="#">Feed</a>
         </nav>
     </header>
-    <div class="postTable
+    <main>
+        <div class="bg-contain bg-no-repeat w-100% h-1000 justify-center" id="posts">
+            <h2>Pet Hangar</h2>
+            <h3 id="noPets">You don't have any posts yet!</h3>
+            <!-- <div class="flex justify-end" id="settingsDropdownBtn"><button>Settings</button></div>
+                <ul id="setList" class="hidden">
+                    <li>Name</li>
+                    <li>Pets</li>
+                </ul> -->
+            <!-- TODO: Add JS logic to open textbox and image insert field -->
+            <div class="postTable
         border-4 border-thepurple bg-gradient-to-l from-thelightblue to-themediumblue2 via-themediumblue1
         text-white items-center
     ">
@@ -51,22 +61,13 @@ bg-gradient-to-r from-thelightblue to-thedarkblue via-themediumblue1
                     <td>What's Up?</td>
                     <td><input type="text" id="postContent" class="text-thepurple rounded-md mb-2"></td>
                 </tr>
+                <button type="submit" id="postSubmit" class="
+                
+                "></button>
             </div>
         </table>
     </div>
-    <main>
-        <div class="bg-contain bg-no-repeat w-100% h-1000 justify-center" id="posts">
-            <h2>Pet Hangar</h2>
-            <h3 id="noPets">You don't have any posts yet!</h3>
-            <!-- TODO: Add JS logic to open textbox and image insert field -->
-            <button id="postPet">Click here to post your furry friend!</button>
-            <!-- <button id="submitPet">
-            <style>
-                submitPet {
-                    display: none;
-                    }
-                </style>
-            </button> -->
+           
         </div>
     </main>
     <footer class = "bg-gradient-to-r from-cyan-500 to-blue-500 border-b-4 mt-80"></footer>
