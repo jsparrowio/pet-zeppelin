@@ -1,31 +1,34 @@
 const myDoc = document;
-let posts = [];
-let users = [];
-let currentUser = [];
-let currentElement;
 
-readLocalStorage();
- 
-function readLocalStorage() {
-    const storedPosts = JSON.parse(localStorage.getItem('posts'));
-    const storedUsers = JSON.parse(localStorage.getItem('users'));
-    if (storedPosts) {
-      posts = storedPosts;
-    } else {
-      posts = [];
-    }
-    if (storedUsers) {
-        users = storedUsers;
-      } else {
-        users = [];
-      }
-      return;
-  }
-  // Creates a function called `storeLocalStorage` that takes a given object and saves the new data to the existing blog data in local storage.
-  function storeLocalStorage() {
-    localStorage.setItem('posts', JSON.stringify(posts));
-    localStorage.setItem('users', JSON.stringify(users));
-  }
+function checkCurrentUser() {
+const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+return currentUser || [];
+}
+
+function setCurrentUser(userData) {
+  localStorage.setItem('currentUser', JSON.stringify(userData));
+}
+
+function readUsers() {
+  const users= JSON.parse(localStorage.getItem('users'));
+  return users || [];
+}
+
+function readPosts() {
+  const posts = JSON.parse(localStorage.getItem('posts'));
+  return posts || [];
+}
+
+function storePost(blogPost) {
+  const posts = readPosts();
+  posts.push(blogPost);
+  localStorage.setItem('posts', JSON.stringify(posts));
+}
+function storeUser(userData) {
+  const users = readUsers();
+  users.push(userData);
+  localStorage.setItem('users', JSON.stringify(users));
+}
 
   function alertWarning(message) {
     const headerEl = myDoc.querySelector('header');
@@ -34,6 +37,9 @@ function readLocalStorage() {
     alertEl.innerHTML = `<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
     ${message}`;
     headerEl.after(alertEl);
+    setTimeout(() => {
+      alertEl.style.display='none';
+    }, "10000");
   }
 
   function alertSuccess(message) {
@@ -43,6 +49,9 @@ function readLocalStorage() {
     alertEl.innerHTML = `<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
     ${message}`;
     headerEl.after(alertEl);
+    setTimeout(() => {
+      alertEl.style.display='none';
+    }, "10000");
   }
 
   function alertCaution(message) {
@@ -52,4 +61,14 @@ function readLocalStorage() {
     alertEl.innerHTML = `<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
     ${message}`;
     headerEl.after(alertEl);
+    setTimeout(() => {
+      alertEl.style.display='none';
+    }, "10000");
   }
+
+let redirectURL = '';
+
+const redirectPage = function (url) {
+  redirectURL = url;
+  location.assign(url);
+};
