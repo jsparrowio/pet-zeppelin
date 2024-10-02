@@ -1,27 +1,29 @@
 const postsEl = myDoc.getElementById('posts');
 const submitButton = myDoc.getElementById('postSubmit');
+const expandButton = myDoc.getElementById('expandTable');
+const expandTable = myDoc.getElementbyId('collapseTable');
 
-function renderPosts(){
+function renderPosts() {
     // TODO: Clear all elements attached to main?
     const blogPosts = readPosts(); // get list of post objects from local storage
-    for(postsObj in blogPosts){
+    for (postsObj in blogPosts) {
         buildPost(postsObj);
     }
 }
 
-function submitPost(event){
+function submitPost(event) {
     event.preventDefault();
     //const formEl = myDoc.querySelector('form');
     //create a new post by populating an object with parameters
     const imgSubmit = myDoc.getElementById('postImage');
     const titleSubmit = myDoc.getElementById('postTitle');
     const contentSubmit = myDoc.getElementById('postContent');
-    
+
     const blogPost = {
-        image: imgSubmit, 
+        image: imgSubmit,
         username: currentUser.username,
-        title: titleSubmit, 
-        content: contentSubmit 
+        title: titleSubmit,
+        content: contentSubmit
     };
 
     storePost(blogPost);
@@ -29,7 +31,7 @@ function submitPost(event){
     //formEl.reset();
 };
 
-function buildPost(blogPost){
+function buildPost(blogPost) {
     //make all the elements of the post
     const articleEl = myDoc.createElement('article');
     const imgEl = myDoc.createElement('img');
@@ -47,8 +49,8 @@ function buildPost(blogPost){
     articleEl.appendChild(titleEl);
     articleEl.appendChild(contentEl);
     //check if the posts div is empty, if not, then put the next added post above the first post
-    if(postsEl.hasChildNodes()){
-        postsEl.insertBefore(articleEl,postsEl.firstChild);
+    if (postsEl.hasChildNodes()) {
+        postsEl.insertBefore(articleEl, postsEl.firstChild);
     } else {
         postsEl.appendChild(articleEl);
     }
@@ -56,4 +58,21 @@ function buildPost(blogPost){
 }
 
 submitButton.addEventListener('submit', submitPost);
+
+let tableShow = true;
+
+function expandForm(event) {
+    event.preventDefault();
+    if (tableShow) {
+        expandTable.setAttribute('class', 'collapse m-auto');
+        tableShow = false;
+        console.log('TABLESHOW FALSE');
+    } else {
+        expandTable.setAttribute('class', 'm-auto');
+        tableShow = true;
+        console.log('TABLESHOW TRUE');
+    }
+}
+
+expandButton.addEventListener('click', expandForm);
 //TODO add event listner for submit button on post
