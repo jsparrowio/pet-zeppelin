@@ -11,6 +11,8 @@ Concept -
 
 Deployment -
 
+* Repository contains multiple descriptive commit messages.
+
 Repository -
 * Repository has a unique name.
 
@@ -37,8 +39,6 @@ This project is graded based on the following criteria:
 * Repository follows best practices for file structure and naming conventions.
 
 * Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
 
 * Repository contains a quality README file with description, screenshot, and link to deployed application.
 
