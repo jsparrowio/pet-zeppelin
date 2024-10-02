@@ -26,8 +26,7 @@ h2 {
     margin-bottom: 50px;
 }
 .alertWarning {
-    margin: 0 auto;
-    margin-top: 1rem;
+    margin: 1rem auto;
     width: fit-content;
     padding: 20px;
     background-color: #f44336;
@@ -36,8 +35,7 @@ h2 {
   }
 
   .alertSuccess {
-    margin: 0 auto;
-    margin-top: 1rem;
+    margin: 1rem auto;
     width: fit-content;
     padding: 20px;
     background-color: #24de13;
@@ -47,8 +45,7 @@ h2 {
 
 
   .alertCaution {
-    margin: 0 auto;
-    margin-top: 1rem;
+    margin: 1rem auto;
     width: fit-content;
     padding: 20px;
     background-color: #e1900d;

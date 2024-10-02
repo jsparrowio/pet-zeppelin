@@ -5,6 +5,7 @@ const passwordEl = myDoc.getElementById('loginPassword');
 
 //Event listener for clicking submit button
 loginbutton.addEventListener('click', function (event) {
+    const users = readUsers();
     event.preventDefault();
     console.log("DING");
     //TODO IF LocalStorage doesn't have an object that contains a matching username
@@ -14,19 +15,19 @@ loginbutton.addEventListener('click', function (event) {
     if(users[i].username.includes(usernameEl.value)){
         //check to see if password matches
         if(users[i].password === passwordEl.value){
-            const currentUser = {
+            const userData = {
                 username: usernameEl.value,
                 password: passwordEl.value
             }
-            localStorage.setItem('currentUser',JSON.stringify(currentUser));
+            setCurrentUser(userData);
             alertSuccess('Login successfull!');
+            redirectPage('./blogpage.html')
             return;
             //LOGIN SUCCESS <-- what does this mean? Current Profile = this profile object?
             //GO to main page
         }
         else {
-            alertWarning('Wrong password stupid');
-            //change paragraph element in login to say 'invalid username or password'
+            alertWarning('Incorrect username or password!');
             return;
         }
     }
@@ -35,6 +36,7 @@ if(i === users.length){
     //Create a new profile
     newProfile();
     alertSuccess('New user registered!');
+    redirectPage('./blogpage.html')
     //GO to main page maybe make this current profile?
     return;
 }
@@ -43,21 +45,18 @@ if(i === users.length){
     //Create a new profile
     newProfile();
     alertSuccess('New user registered!');
+    redirectPage('./blogpage.html')
     return;
     //GO to main page maybe make this current profile?
 }
 });
 
 function newProfile() {
-    users.push({
-        username: usernameEl.value,
-        password: passwordEl.value
-    })
-    const currentUser = {
+    const userData = {
         username: usernameEl.value,
         password: passwordEl.value
     }
-    localStorage.setItem('currentUser',JSON.stringify(currentUser));
-    storeLocalStorage();
-    return users;
+    setCurrentUser(userData);
+    storeUser(userData);
+    return userData;
 }
