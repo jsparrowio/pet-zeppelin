@@ -63,15 +63,45 @@ bg-gradient-to-r from-thelightblue to-thedarkblue via-themediumblue1
         <div class="bg-contain bg-no-repeat w-100% h-1000 justify-center" id="posts">
             <h2>Pet Hangar</h2>
             <h3 id="noPets">You don't have any posts yet!</h3>
+            <!-- <div class="flex justify-end" id="settingsDropdownBtn"><button>Settings</button></div>
+                <ul id="setList" class="hidden">
+                    <li>Name</li>
+                    <li>Pets</li>
+                </ul> -->
             <!-- TODO: Add JS logic to open textbox and image insert field -->
-            <button id="postPet">Click here to post your furry friend!</button>
-            <!-- <button id="submitPet">
-            <style>
-                submitPet {
-                    display: none;
-                    }
-                </style>
-            </button> -->
+            <div class="postTable
+        border-4 border-thepurple bg-gradient-to-l from-thelightblue to-themediumblue2 via-themediumblue1
+        text-white items-center
+    ">
+        <table class="
+            m-auto
+        ">
+            <div class="postDropdown">
+                <tr>
+                    <td>Post your pet, dummy!</td>
+                    <td><button type="button" id="postDropdownButton" class="border-2 rounded-xl m-auto px">Post!</button></td>
+                </tr>
+            </div>
+            <div>
+                <tr>
+                    <td>Title:</td>
+                    <td><input type="text" value="Woof Woof!" id="postTitle" class="text-thepurple rounded-md ms-2"></td>
+                </tr>
+                <tr>
+                    <td>Your Pet!</td>
+                    <td><input type="text" value="Please use a static link!" id="postImage" class="text-thepurple rounded-md mb-2"></td>
+                </tr>
+                <tr>
+                    <td>What's Up?</td>
+                    <td><input type="text" id="postContent" class="text-thepurple rounded-md mb-2"></td>
+                </tr>
+                <button type="submit" id="postSubmit" class="
+                
+                "></button>
+            </div>
+        </table>
+    </div>
+           
         </div>
     </main>
     <footer class = "bg-gradient-to-r from-cyan-500 to-blue-500 border-b-4 mt-80"></footer>
