@@ -29,19 +29,23 @@ bg-gradient-to-r from-thelightblue to-thedarkblue via-themediumblue1
         border-4 border-thepurple bg-gradient-to-l from-thelightblue to-themediumblue2 via-themediumblue1
         text-white items-center
     ">
+    <form>
         <table class="
-            m-auto
+            m-auto collapse
         ">
             <div class="postDropdown">
+                <p>Post your pet!</p> <button type="button" id="expandTable" class="
+                border-2 rounded-full bg-gradient-to-r from-themediumblue1 to-themediumblue2 via-thelightblue
+                ">Expand</button>
                 <tr>
-                    <td>Post your pet, dummy!</td>
-                    <td><button type="button" id="postDropdownButton" class="border-2 rounded-xl m-auto px">Post!</button></td>
+                    <td>It's not a post, it's a Blimp™!</td>
+                    <td><button type="submit" id="postDropdownButton" class="border-2 rounded-xl px-20">Post!</button></td>
                 </tr>
             </div>
             <div>
                 <tr>
                     <td>Title:</td>
-                    <td><input type="text" value="Woof Woof!" id="postTitle" class="text-thepurple rounded-md ms-2"></td>
+                    <td><input type="text" value="Woof Woof!" id="postTitle" class="text-thepurple rounded-md mb-2"></td>
                 </tr>
                 <tr>
                     <td>Your Pet!</td>
@@ -53,6 +57,7 @@ bg-gradient-to-r from-thelightblue to-thedarkblue via-themediumblue1
                 </tr>
             </div>
         </table>
+    </form>
     </div>
     <main>
         <div class="bg-contain bg-no-repeat w-100% h-1000 justify-center" id="posts">
