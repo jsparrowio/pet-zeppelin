@@ -33,6 +33,7 @@ function buildPost(blogPost){
     //make all the elements of the post
     const articleEl = myDoc.createElement('article');
     const imgEl = myDoc.createElement('img');
+    const textBlockEl = myDoc.createElement('div');
     const userEl = myDoc.createElement('h3');
     const titleEl = myDoc.createElement('h2');
     const contentEl = myDoc.createElement('blockquote');
@@ -41,11 +42,19 @@ function buildPost(blogPost){
     userEl.textContent = blogPost.username;
     titleEl.textContent = blogPost.title;
     contentEl.textContent = blogPost.content;
+    //add tailwind classes
+    articleEl.setAttribute('class',"visible px-52");
+    imgEl.setAttribute('class',"m-auto border-1 rounded-xl");
+    textBlockEl.setAttribute('class',"bg-backgroundblue rounded-xl");
+    userEl.setAttribute('class',"text-themediumblue1");
+    titleEl.setAttribute('class',"bg-thepurple text-white rounded-xl text-xl");
+    contentEl.setAttribute('class',"px-24 py-6 border-t-2 mx-6 text-lg");
     //append everything together
     articleEl.appendChild(imgEl);
-    articleEl.appendChild(userEl);
-    articleEl.appendChild(titleEl);
-    articleEl.appendChild(contentEl);
+    textBlockEl.appendChild(userEl);
+    textBlockEl.appendChild(titleEl);
+    textBlockEl.appendChild(contentEl);
+    articleEl.appendChild(textBlockEl);
     //check if the posts div is empty, if not, then put the next added post above the first post
     if(postsEl.hasChildNodes()){
         postsEl.insertBefore(articleEl,postsEl.firstChild);
