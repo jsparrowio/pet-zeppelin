@@ -3,32 +3,33 @@ const submitButton = myDoc.getElementById('postSubmit');
 
 function renderPosts(){
     // TODO: Clear all elements attached to main?
-    const blogPosts = 'THIS IS NOT THE REAL VALUE'; // get list of post objects from local storage
-    for(postObj in blogPosts){
-        buildPost(postObj);
+    const blogPosts = readPosts(); // get list of post objects from local storage
+    for(postsObj in blogPosts){
+        buildPost(postsObj);
     }
 }
 
-function submitPost(){
-    let post = [];
-    // create a new post by populating an object with parameters
+function submitPost(event){
+    event.preventDefault();
+    //const formEl = myDoc.querySelector('form');
+    //create a new post by populating an object with parameters
     const imgSubmit = myDoc.getElementById('postImage');
     const titleSubmit = myDoc.getElementById('postTitle');
     const contentSubmit = myDoc.getElementById('postContent');
     
-    const newPost = {
+    const blogPost = {
         image: imgSubmit, 
         username: currentUser.username,
         title: titleSubmit, 
         content: contentSubmit 
     };
-    post = ''; //TODO Add readStorage fuction to add parsed array of post objects
-    post.push(newPost);
-    // TODO add storeLocalStorage function here
-    buildPost(newPost);
+
+    storePost(blogPost);
+    buildPost(blogPost);
+    //formEl.reset();
 };
 
-function buildPost(singleObject){
+function buildPost(blogPost){
     //make all the elements of the post
     const articleEl = myDoc.createElement('article');
     const imgEl = myDoc.createElement('img');
@@ -36,10 +37,10 @@ function buildPost(singleObject){
     const titleEl = myDoc.createElement('h2');
     const contentEl = myDoc.createElement('blockquote');
     //add all the content from the object to each element
-    imgEl.src = singleObject.image;
-    userEl.textContent = singleObject.username;
-    titleEl.textContent = singleObject.title;
-    contentEl.textContent = singleObject.content;
+    imgEl.src = blogPost.image;
+    userEl.textContent = blogPost.username;
+    titleEl.textContent = blogPost.title;
+    contentEl.textContent = blogPost.content;
     //append everything together
     articleEl.appendChild(imgEl);
     articleEl.appendChild(userEl);
@@ -54,5 +55,5 @@ function buildPost(singleObject){
 
 }
 
-submitButton.addEventListener('click', submitPost());
+submitButton.addEventListener('submit', submitPost);
 //TODO add event listner for submit button on post
