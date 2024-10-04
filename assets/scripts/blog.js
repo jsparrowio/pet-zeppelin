@@ -1,5 +1,7 @@
-const postsEl = myDoc.getElementById('posts');
-const submitButton = myDoc.getElementById('postSubmit');
+const postsEl = document.getElementById('posts');
+const submitButton = document.getElementById('postSubmit');
+const expandButton = document.getElementById('expandTable');
+const expandTable = document.getElementById('collapseTable');
 const populateDummies = true; // SET TO FALSE IF YOU WANT TO REMOVE DUMMY POSTS
 
 function renderPosts(){
@@ -15,19 +17,19 @@ function renderPosts(){
     }
 }
 
-function submitPost(event){
+function submitPost(event) {
     event.preventDefault();
-    //const formEl = myDoc.querySelector('form');
+    //const formEl = document.querySelector('form');
     //create a new post by populating an object with parameters
-    const imgSubmit = myDoc.getElementById('postImage');
-    const titleSubmit = myDoc.getElementById('postTitle');
-    const contentSubmit = myDoc.getElementById('postContent');
-    
+    const imgSubmit = document.getElementById('postImage');
+    const titleSubmit = document.getElementById('postTitle');
+    const contentSubmit = document.getElementById('postContent');
+
     const blogPost = {
-        image: imgSubmit, 
+        image: imgSubmit,
         username: currentUser.username,
-        title: titleSubmit, 
-        content: contentSubmit 
+        title: titleSubmit,
+        content: contentSubmit
     };
 
     storePost(blogPost);
@@ -35,14 +37,13 @@ function submitPost(event){
     //formEl.reset();
 };
 
-function buildPost(blogPost){
+function buildPost(blogPost) {
     //make all the elements of the post
-    const articleEl = myDoc.createElement('article');
-    const imgEl = myDoc.createElement('img');
-    const textBlockEl = myDoc.createElement('div');
-    const userEl = myDoc.createElement('h3');
-    const titleEl = myDoc.createElement('h2');
-    const contentEl = myDoc.createElement('blockquote');
+    const articleEl = document.createElement('article');
+    const imgEl = document.createElement('img');
+    const userEl = document.createElement('h3');
+    const titleEl = document.createElement('h2');
+    const contentEl = document.createElement('blockquote');
     //add all the content from the object to each element
     imgEl.src = blogPost.image;
     userEl.textContent = blogPost.username;
@@ -62,8 +63,8 @@ function buildPost(blogPost){
     textBlockEl.appendChild(contentEl);
     articleEl.appendChild(textBlockEl);
     //check if the posts div is empty, if not, then put the next added post above the first post
-    if(postsEl.hasChildNodes()){
-        postsEl.insertBefore(articleEl,postsEl.firstChild);
+    if (postsEl.hasChildNodes()) {
+        postsEl.insertBefore(articleEl, postsEl.firstChild);
     } else {
         postsEl.appendChild(articleEl);
     }
@@ -71,4 +72,21 @@ function buildPost(blogPost){
 };
 
 submitButton.addEventListener('submit', submitPost);
+
+let tableShow = false;
+
+function expandForm(event) {
+    event.preventDefault();
+    if (tableShow) {
+        expandTable.setAttribute('class', 'collapse m-auto');
+        tableShow = false;
+        console.log('TABLESHOW FALSE');
+    } else {
+        expandTable.setAttribute('class', 'm-auto');
+        tableShow = true;
+        console.log('TABLESHOW TRUE');
+    }
+};
+
+expandButton.addEventListener('click', expandForm);
 //TODO add event listner for submit button on post
