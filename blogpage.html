@@ -36,7 +36,7 @@ bg-gradient-to-r from-thelightblue to-thedarkblue via-themediumblue1
             <div class="postDropdown">
                 <p>Post your pet!</p> <button type="button" id="expandTable" class="
                 border-2 rounded-full bg-gradient-to-r from-themediumblue1 to-themediumblue2 via-thelightblue
-                ">Expand</button>
+                ">Expand</button><button type="button" id="modalBtn" class="border-2 rounded-xl bg-backgroundblue border-white text-thepurple">[MODAL TRIGGER]</button>
                 <tr>
                     <td>It's not a post, it's a Blimp™!</td>
                     <td><button type="submit" id="postSubmit" class="border-2 rounded-xl px-20">Post!</button></td>
@@ -58,6 +58,12 @@ bg-gradient-to-r from-thelightblue to-thedarkblue via-themediumblue1
             </div>
         </table>
     </form>
+    </div>
+    <div id="postModal" class="modal">
+        <div class="modal-content">
+            <span class="modalClose" id="modalClose">&times;</span>
+            
+        </div>
     </div>
     <div id="postsDiv"></div>
         <div id="posts" class="visible px-52">

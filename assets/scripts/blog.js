@@ -113,3 +113,28 @@ renderPosts();
 
 submitButton.addEventListener('click', submitPost);
 expandButton.addEventListener('click', expandForm);
+
+//Modal js
+
+//modal refs
+const modal = document.getElementById('postModal');
+const modalbtn = document.getElementById('modalBtn');
+const modalClose = document.getElementById('modalClose');
+//modal triggers
+modalbtn.onclick = function() {
+    modal.style.display = "block";
+};
+
+modalClose.onclick = function () {
+    modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
+
+//when the user clicks the x, close modal
+
+//when the user clicks out of the modal, close modal
