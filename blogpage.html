@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./assets/scripts/tailwind.config"></script>
+
     <title>Pet Zeppelin Blog Page</title>
 </head>
 
@@ -38,7 +39,7 @@ bg-gradient-to-r from-thelightblue to-thedarkblue via-themediumblue1
                 ">Expand</button>
                 <tr>
                     <td>It's not a post, it's a Blimp™!</td>
-                    <td><button type="submit" id="postDropdownButton" class="border-2 rounded-xl px-20">Post!</button></td>
+                    <td><button type="submit" id="postSubmit" class="border-2 rounded-xl px-20">Post!</button></td>
                 </tr>
             </div>
             <div>
@@ -59,7 +60,6 @@ bg-gradient-to-r from-thelightblue to-thedarkblue via-themediumblue1
     </form>
     </div>
     <div id="postsDiv"></div>
-        <span id="postbar" class="width-60 h-20">Posts</span><span><button id="collapsepostsbutton">v</button></span>
         <div id="posts" class="visible px-52">
             <article class="
             scale-75
@@ -78,4 +78,5 @@ bg-gradient-to-r from-thelightblue to-thedarkblue via-themediumblue1
 <footer class = "bg-gradient-to-r from-cyan-500 to-blue-500 border-b-4">
     <p>&copy; 2024</p>
 </footer>
+<script src="./assets/scripts/blog.js"></script>
 </html>

@@ -1,7 +1,7 @@
-const postsEl = myDoc.getElementById('posts');
-const submitButton = myDoc.getElementById('postSubmit');
-const expandButton = myDoc.getElementById('expandTable');
-const expandTable = myDoc.getElementbyId('collapseTable');
+const postsEl = document.getElementById('posts');
+const submitButton = document.getElementById('postSubmit');
+const expandButton = document.getElementById('expandTable');
+const expandTable = document.getElementById('collapseTable');
 
 function renderPosts() {
     // TODO: Clear all elements attached to main?
@@ -13,11 +13,11 @@ function renderPosts() {
 
 function submitPost(event) {
     event.preventDefault();
-    //const formEl = myDoc.querySelector('form');
+    //const formEl = document.querySelector('form');
     //create a new post by populating an object with parameters
-    const imgSubmit = myDoc.getElementById('postImage');
-    const titleSubmit = myDoc.getElementById('postTitle');
-    const contentSubmit = myDoc.getElementById('postContent');
+    const imgSubmit = document.getElementById('postImage');
+    const titleSubmit = document.getElementById('postTitle');
+    const contentSubmit = document.getElementById('postContent');
 
     const blogPost = {
         image: imgSubmit,
@@ -33,11 +33,11 @@ function submitPost(event) {
 
 function buildPost(blogPost) {
     //make all the elements of the post
-    const articleEl = myDoc.createElement('article');
-    const imgEl = myDoc.createElement('img');
-    const userEl = myDoc.createElement('h3');
-    const titleEl = myDoc.createElement('h2');
-    const contentEl = myDoc.createElement('blockquote');
+    const articleEl = document.createElement('article');
+    const imgEl = document.createElement('img');
+    const userEl = document.createElement('h3');
+    const titleEl = document.createElement('h2');
+    const contentEl = document.createElement('blockquote');
     //add all the content from the object to each element
     imgEl.src = blogPost.image;
     userEl.textContent = blogPost.username;
@@ -59,7 +59,7 @@ function buildPost(blogPost) {
 
 submitButton.addEventListener('submit', submitPost);
 
-let tableShow = true;
+let tableShow = false;
 
 function expandForm(event) {
     event.preventDefault();
@@ -72,7 +72,7 @@ function expandForm(event) {
         tableShow = true;
         console.log('TABLESHOW TRUE');
     }
-}
+};
 
 expandButton.addEventListener('click', expandForm);
 //TODO add event listner for submit button on post
