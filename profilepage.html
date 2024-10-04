@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./assets/scripts/tailwind.config"></script>
-    <script defer src="./assets/scripts/profile.js"></script>
 </head>
 
 <body class="
@@ -25,88 +24,45 @@ bg-gradient-to-r from-thelightblue to-thedarkblue via-themediumblue1
             <a href="./blogpage.html">Feed</a>
         </nav>
     </header>
-    <div class="postTable
-        border-4 border-thepurple bg-gradient-to-l from-thelightblue to-themediumblue2 via-themediumblue1
-        text-white items-center
-    ">
-    <form>
-        <table class="
-            m-auto collapse
-        ">
-            <div class="postDropdown">
-                <p>Post your pet!</p> <button type="button" id="expandTable" class="
-                border-2 rounded-full bg-gradient-to-r from-themediumblue1 to-themediumblue2 via-thelightblue
-                ">Expand</button>
-                <tr>
-                    <td>It's not a post, it's a Blimp™!</td>
-                    <td><button type="submit" id="postDropdownButton" class="border-2 rounded-xl px-20">Post!</button></td>
-                </tr>
-            </div>
-            <div>
-                <tr>
-                    <td>Title:</td>
-                    <td><input type="text" value="Woof Woof!" id="postTitle" class="text-thepurple rounded-md mb-2"></td>
-                </tr>
-                <tr>
-                    <td>Your Pet!</td>
-                    <td><input type="text" value="Please use a static link!" id="postImage" class="text-thepurple rounded-md mb-2"></td>
-                </tr>
-                <tr>
-                    <td>What's Up?</td>
-                    <td><input type="text" id="postContent" class="text-thepurple rounded-md mb-2"></td>
-                </tr>
-            </div>
-        </table>
-    </form>
-    </div>
     <main>
-        <div class="bg-contain bg-no-repeat w-100% h-1000 justify-center" id="posts">
-            <h2>Pet Hangar</h2>
-            <h3 id="noPets">You don't have any posts yet!</h3>
-            <!-- <div class="flex justify-end" id="settingsDropdownBtn"><button>Settings</button></div>
-                <ul id="setList" class="hidden">
-                    <li>Name</li>
-                    <li>Pets</li>
-                </ul> -->
-            <!-- TODO: Add JS logic to open textbox and image insert field -->
-            <div class="postTable
-        border-4 border-thepurple bg-gradient-to-l from-thelightblue to-themediumblue2 via-themediumblue1
-        text-white items-center
-    ">
-        <table class="
-            m-auto
-        ">
-            <div class="postDropdown">
-                <tr>
-                    <td>Post your pet, dummy!</td>
-                    <td><button type="button" id="postDropdownButton" class="border-2 rounded-xl m-auto px">Post!</button></td>
-                </tr>
-            </div>
-            <div>
-                <tr>
-                    <td>Title:</td>
-                    <td><input type="text" value="Woof Woof!" id="postTitle" class="text-thepurple rounded-md ms-2"></td>
-                </tr>
-                <tr>
-                    <td>Your Pet!</td>
-                    <td><input type="text" value="Please use a static link!" id="postImage" class="text-thepurple rounded-md mb-2"></td>
-                </tr>
-                <tr>
-                    <td>What's Up?</td>
-                    <td><input type="text" id="postContent" class="text-thepurple rounded-md mb-2"></td>
-                </tr>
-                <button type="submit" id="postSubmit" class="
-                
-                "></button>
-            </div>
-        </table>
-    </div>
-           
-        </div>
+    <section class="profileSection" id="intro">
+       <img src="https://placehold.co/400" alt="Placeholder for Profile Image" class="
+       m-auto rounded-full 
+       ">
+       <p class="usernameDisplay"></p>
+       <h2 class="petsDisplay
+       border-b-4
+       text-xl text-white
+       mx-6
+       ">
+       My Pets!</h2>
+    </section>
+        <section class="profileSection
+            
+            " id="aboutMe">
+                <p class="sectionTitle 
+                border-b-4 border-white
+                text-xl text-white
+                mx-6
+                ">About Me!</p>
+                <button type="button" id="editAboutMe" class="border-2 rounded-md border-thepurple text-white">Edit</button>
+                    <div id="aboutMeBox" class="textBox
+                    bg-backgroundblue
+                    text-thedarkblue text-lg italic
+                    "></div>
+                    <div id="editBox" class="bg-thebackgroundblue text-thedarkblue text-lg hidden">
+                        <input type="textbox" id="editPF" class="bg-thebackgroundblue text-thedarkblue text-lg">
+                        <label for="editPF" class="text-backgroundblue text-lg">Set Profile Photo (static link)</label>
+                        <button type="submit" id="submitAM" class="border-2 rounded-md border-thepurple text-white">Submit</button>
+                        <br><label for="editAMBox" class="text-backgroundblue text-lg">Set About Me</label>
+                        <br><input type="textbox" id="editAMBox" class="bg-thebgackgroundblue text-thedarkblue text-lg" size="50">
+                    </div>
+        </section>
     </main>
     <footer class = "bg-gradient-to-r from-cyan-500 to-blue-500 border-b-4 mt-80"></footer>
         <p>&copy; 2024</p>
     </footer>
+    <script src="./assets/scripts/global.js"></script>
+    <script src="./assets/scripts/profile.js"></script>
 </body>
-
 </html>
