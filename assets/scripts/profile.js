@@ -1,15 +1,47 @@
-const myDoc = document;
+
 const setBtn = myDoc.getElementById("settingsDropdownBtn")
 const setLi = myDoc.getElementById("setList");
+const editButton = myDoc.getElementById("editAboutMe");
+const editBox = myDoc.getElementById("editBox");
+const aboutMe = myDoc.getElementById("aboutMeBox");
+const newAM = myDoc.getElementById("editAMBox");
+const submitAMbutton = myDoc.getElementById('submitAM');
 
-setBtn.addEventListener('click', function () {
-  if (setLi.class === "hidden"){
-    setLi.class = "block" 
-  } else if (setLi.class === "block") {
-    setLi.class = "hidden";
+const renderAM = function() {
+  
+  const AMEl = myDoc.createElement('h2');
+  AMEl.textContent = JSON.parse(localStorage.getItem('About Me'));
+  aboutMe.appendChild(AMEl);
+
+}
+renderAM;
+
+let showEditBox = false;
+const editToggle = function (event) {
+  event.preventDefault();
+  if (showEditBox) {
+      editBox.setAttribute('class', 'hidden');
+      showEditBox = false;
+      console.log('TABLESHOW FALSE');
+  } else {
+      editBox.setAttribute('class', 'visible');
+      showEditBox = true;
+      console.log('TABLESHOW TRUE');
   }
-})
+};
 
+editButton.addEventListener('click', editToggle);
+
+const submitAM = function (event) {
+  event.preventDefault();
+  if (newAM.value === "") {
+    alert('Please Set About Me!');
+  } else {
+  localStorage.setItem('About Me', JSON.stringify(newAM.value));
+  editToggle();
+}};
+
+submitAMbutton.addEventListener('click', submitAM);
 
 
 
