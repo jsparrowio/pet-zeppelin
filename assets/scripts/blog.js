@@ -3,10 +3,20 @@ const submitButton = document.getElementById('postSubmit');
 const expandButton = document.getElementById('expandTable');
 const expandTable = document.getElementById('collapseTable');
 
-function renderPosts() {
-    // TODO: Clear all elements attached to main?
+
+const postsEl = document.getElementById('posts');
+const submitButton = document.getElementById('postSubmit');
+const populateDummies = true; // SET TO FALSE IF YOU WANT TO REMOVE DUMMY POSTS
+
+function renderPosts(){
     const blogPosts = readPosts(); // get list of post objects from local storage
-    for (postsObj in blogPosts) {
+    if(populateDummies){
+        const dummyPost = JSON.parse(fetch('./assets/scripts/dummyposts.JSON'));
+        for(dummy in dummyPost){
+            blogPosts.push(dummy);
+        }
+    };
+    for(postsObj in blogPosts){
         buildPost(postsObj);
     }
 }
@@ -43,11 +53,19 @@ function buildPost(blogPost) {
     userEl.textContent = blogPost.username;
     titleEl.textContent = blogPost.title;
     contentEl.textContent = blogPost.content;
+    //add tailwind classes
+    articleEl.setAttribute('class',"visible px-52");
+    imgEl.setAttribute('class',"m-auto border-1 rounded-xl");
+    textBlockEl.setAttribute('class',"bg-backgroundblue rounded-xl");
+    userEl.setAttribute('class',"text-themediumblue1");
+    titleEl.setAttribute('class',"bg-thepurple text-white rounded-xl text-xl");
+    contentEl.setAttribute('class',"px-24 py-6 border-t-2 mx-6 text-lg");
     //append everything together
     articleEl.appendChild(imgEl);
-    articleEl.appendChild(userEl);
-    articleEl.appendChild(titleEl);
-    articleEl.appendChild(contentEl);
+    textBlockEl.appendChild(userEl);
+    textBlockEl.appendChild(titleEl);
+    textBlockEl.appendChild(contentEl);
+    articleEl.appendChild(textBlockEl);
     //check if the posts div is empty, if not, then put the next added post above the first post
     if (postsEl.hasChildNodes()) {
         postsEl.insertBefore(articleEl, postsEl.firstChild);
@@ -55,7 +73,7 @@ function buildPost(blogPost) {
         postsEl.appendChild(articleEl);
     }
 
-}
+};
 
 submitButton.addEventListener('submit', submitPost);
 
