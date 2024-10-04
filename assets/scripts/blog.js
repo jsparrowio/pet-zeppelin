@@ -3,54 +3,76 @@ const submitButton = document.getElementById('postSubmit');
 const expandButton = document.getElementById('expandTable');
 const expandTable = document.getElementById('collapseTable');
 const populateDummies = true; // SET TO FALSE IF YOU WANT TO REMOVE DUMMY POSTS
-
+const dummyposts = [
+    {
+        "image": "https://i.ibb.co/cXPpCtX/rio-Profile.jpg",
+        "username": "captaincrimes",
+        "title": "just got done shoplifting",
+        "content": "oh boy, just got home from another day of shopliftin!"
+        },
+    {
+        "image": "https://i.ibb.co/0DGYJQH/PXL-20240801-203701698.jpg",
+        "username": "mattatoes",
+        "title": "Two silly Dogs",
+        "content": "Two knuckleheads laying down nose to nose. They're just tuckered out from a long day of doing nothing at all."
+        },
+    {
+        "image": "https://i.ibb.co/8B3CRpV/gonzo1.jpg",
+        "username": "jsparrowio",
+        "title": "i iz tired",
+        "content": "i iz so tired, i take nap now. gooodddniggghttt"
+        }
+]
 function renderPosts(){
     const blogPosts = readPosts(); // get list of post objects from local storage
     if(populateDummies){
-        const dummyPost = JSON.parse(fetch('./assets/scripts/dummyposts.JSON'));
-        for(dummy in dummyPost){
-            blogPosts.push(dummy);
+        for(dummy of dummyposts){
+            blogPosts.unshift(dummy);
         }
+    console.log(blogPosts);
     };
-    for(postsObj in blogPosts){
+    for(postsObj of blogPosts){
         buildPost(postsObj);
     }
 }
 
 function submitPost(event) {
+    console.log('HIT');
     event.preventDefault();
-    //const formEl = document.querySelector('form');
+    const currentUser = checkCurrentUser();
+    const formEl = document.querySelector('form');
     //create a new post by populating an object with parameters
     const imgSubmit = document.getElementById('postImage');
     const titleSubmit = document.getElementById('postTitle');
     const contentSubmit = document.getElementById('postContent');
 
     const blogPost = {
-        image: imgSubmit,
+        image: imgSubmit.value,
         username: currentUser.username,
-        title: titleSubmit,
-        content: contentSubmit
+        title: titleSubmit.value,
+        content: contentSubmit.value
     };
 
     storePost(blogPost);
     buildPost(blogPost);
-    //formEl.reset();
+    formEl.reset();
 };
 
-function buildPost(blogPost) {
+function buildPost(bp) {
     //make all the elements of the post
     const articleEl = document.createElement('article');
     const imgEl = document.createElement('img');
+    const textBlockEl = document.createElement('div');
     const userEl = document.createElement('h3');
     const titleEl = document.createElement('h2');
     const contentEl = document.createElement('blockquote');
     //add all the content from the object to each element
-    imgEl.src = blogPost.image;
-    userEl.textContent = blogPost.username;
-    titleEl.textContent = blogPost.title;
-    contentEl.textContent = blogPost.content;
+    imgEl.src = bp.image;
+    userEl.textContent = bp.username;
+    titleEl.textContent = bp.title;
+    contentEl.textContent = bp.content;
     //add tailwind classes
-    articleEl.setAttribute('class',"visible px-52");
+    articleEl.setAttribute('class', "scale-75 m-auto border-4 border-thepurple rounded-xl shadow-2xl bg-gradient-to-l from-thelightblue to-themediumblue2 via-themediumblue1");
     imgEl.setAttribute('class',"m-auto border-1 rounded-xl");
     textBlockEl.setAttribute('class',"bg-backgroundblue rounded-xl");
     userEl.setAttribute('class',"text-themediumblue1");
@@ -71,7 +93,6 @@ function buildPost(blogPost) {
 
 };
 
-submitButton.addEventListener('submit', submitPost);
 
 let tableShow = false;
 
@@ -88,5 +109,7 @@ function expandForm(event) {
     }
 };
 
+renderPosts();
+
+submitButton.addEventListener('click', submitPost);
 expandButton.addEventListener('click', expandForm);
-//TODO add event listner for submit button on post
