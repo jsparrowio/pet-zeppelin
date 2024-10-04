@@ -112,7 +112,6 @@ function expandForm(event) {
 renderPosts();
 
 submitButton.addEventListener('click', submitPost);
-expandButton.addEventListener('click', expandForm);
 
 //Modal js
 

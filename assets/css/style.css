@@ -108,11 +108,16 @@ h2 {
 }
 
 .modal-content {
-    background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
+    border-radius: 50px;
     width: 80%;
+}
+
+.modal-content h2 {
+    color: #643BEB;
+    font-style: italic;
 }
 
 .modalClose {
