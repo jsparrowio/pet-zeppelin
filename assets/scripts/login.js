@@ -60,3 +60,8 @@ function newProfile() {
     storeUser(userData);
     return userData;
 }
+
+let userToGreet = JSON.parse(localStorage.getItem(`currentUser`));
+let welcomeappend = userToGreet.username;
+let welcomeheader = document.getElementById(`userinfo`)
+welcomeheader.textContent += welcomeappend;

@@ -12,6 +12,14 @@
 
 Pet Zeppelin is a blog platform for pet owners, allowing our pet's humans to share images and stories of their pets. Users will be able to create a password protected profile, and make blog posts that will include sharing image URLs. Blog posts will be pulled from local storage and presented to the user.
 
+Pet Zeppelin can be visited at -
+
+https://jsparrowio.github.io/pet-zeppelin/
+
+And the GitHub is at -
+
+https://github.com/jsparrowio/pet-zeppelin
+
 #   Gaze Upon It's Glory
 <img src="./assets/images/loginpage1001.png" width="640" height="360">
 
