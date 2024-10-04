@@ -2,10 +2,6 @@ const postsEl = document.getElementById('posts');
 const submitButton = document.getElementById('postSubmit');
 const expandButton = document.getElementById('expandTable');
 const expandTable = document.getElementById('collapseTable');
-
-
-const postsEl = document.getElementById('posts');
-const submitButton = document.getElementById('postSubmit');
 const populateDummies = true; // SET TO FALSE IF YOU WANT TO REMOVE DUMMY POSTS
 
 function renderPosts(){
