@@ -1,19 +1,24 @@
 COMPLETED:
 
 Technical -
+
 * Application uses a CSS framework.
 * Application is interactive (accepts and responds to user input).
 * Application uses client-side storage to store persistent data.
 
 Concept -
+
 * Application should be a unique and novel idea.
 * Your group should clearly and concisely articulate your project idea.
 
 Deployment -
 
 * Repository contains multiple descriptive commit messages.
+* Application deployed at live URL and loads with no errors.
+* Application GitHub URL submitted.
 
 Repository -
+
 * Repository has a unique name.
 
 ## Grading Requirements
@@ -27,12 +32,6 @@ This project is graded based on the following criteria:
 
 
   * Application must include at least one modal instead of native browser alert, confirm, or prompt functionality. Look into the CSS framework's documentation for more information!
-
-### Deployment: 20%
-
-* Application deployed at live URL and loads with no errors.
-
-* Application GitHub URL submitted.
 
 ### Repository Quality: 10%
 
