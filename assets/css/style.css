@@ -25,32 +25,39 @@ h2 {
     font-size: 2rem;
     margin-bottom: 50px;
 }
-.alertWarning {
-    margin: 1rem auto;
+.alert {
+    position: absolute;
+    margin-top: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
     width: fit-content;
     padding: 20px;
-    background-color: #f44336;
     color: white;
+    z-index: 99;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.5s linear;
+    box-shadow: 0px 0px 5px black;
     border-radius: 25rem;
+    border-width: 2px;
+    border-style: outset;
+    border-color: black;
+  }
+
+  .alertWarning {
+    background-color: #f44336;
   }
 
   .alertSuccess {
-    margin: 1rem auto;
-    width: fit-content;
-    padding: 20px;
     background-color: #24de13;
-    color: white;
-    border-radius: 25rem;
   }
 
 
   .alertCaution {
-    margin: 1rem auto;
-    width: fit-content;
-    padding: 20px;
     background-color: #e1900d;
-    color: white;
-    border-radius: 25rem;
   }
   
   .closebtn {
@@ -76,6 +83,14 @@ h2 {
 #collapsepostsbutton {
     border-left: 2px solid black;
   
+}
+#cats,
+#cats img {
+    z-index: 0;
+}
+#loginbox,
+#loginbox form {
+    z-index: 1;
 }
 
 

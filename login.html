@@ -30,12 +30,23 @@
          pt-24
     ">
         <!-- floating flex panel for login submission-->
+        <div class="flex-none" id="cats">
+            <img src="./assets/images/omgcats.png" alt="3 Cats looking very suprised that you haven't signed up for PetZeppelin!"
+            id="omgcats" class="
+                absolute scale-75 bottom-0 left-0 -mb-12 z-0
+            " >
+            <img src="./assets/images/omgcats1.png" alt="3 Cats looking absolutely bewildered that you haven't signed up and posted your pet on PetZeppelin!"
+            id="omgcats1" class="
+                absolute scale-75 bottom-0 right-0 -mb-12 z-0
+            " >
+        </div>
         <div id="loginbox" class="
                     flex-none scale-150 basis-72 m-auto w-64
                     text-center
                     border-solid border-4 border-thepurple rounded-xl shadow-2xl
                     bg-thedarkblue
-                    focus:z-50" >
+                    z-10
+                    ">
             <aside>
                 <img src="./assets/images/logo.png" alt="the PetZeppelin logo">
                 <p>Welcome to the Dog House.</p>
@@ -54,9 +65,7 @@
                     border-solid border-2 rounded-xl px-2 mt-2 mb-2 
                     hover:bg-white  bg-gradient-to-r from-thepurple to-thedarkblue via-themediumblue1
                     text-white
-                    hover:scale-105 active:scale-95
-                    
-                    
+                    hover:scale-105 active:scale-95 
                 ">
             </form>
         </div>
@@ -64,18 +73,8 @@
         <br>
         <br>
         <!--Images need to shrink while staying in line with footer. fix flex box.-->
-        <div class="flex-none">
-            <img src="./assets/images/omgcats.png" alt="3 Cats looking very suprised that you haven't signed up for PetZeppelin!"
-            id="omgcats" class="
-                absolute scale-75 bottom-0 left-0 -mb-12 z-0
-            ">
-            <img src="./assets/images/omgcats1.png" alt="3 Cats looking absolutely bewildered that you haven't signed up and posted your pet on PetZeppelin!"
-            id="omgcats1" class="
-                absolute scale-75 bottom-0 right-0 -mb-12 z-0
-            ">
-        </div>
     </main>
-    <footer class = " m-auto bg-gradient-to-r from-cyan-500 to-blue-500 border-b-4 z-20">
+    <footer class = "m-auto bg-gradient-to-r from-cyan-500 to-blue-500 border-b-4 z-20">
         <br>
         <p>&copy; 2024</p>
     </footer>

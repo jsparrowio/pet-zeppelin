@@ -33,37 +33,49 @@ function storeUser(userData) {
   function alertWarning(message) {
     const headerEl = myDoc.querySelector('header');
     const alertEl = myDoc.createElement('div');
-    alertEl.classList.add('alertWarning');
-    alertEl.innerHTML = `<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+    alertEl.classList.add('alert', 'alertWarning');
+    alertEl.innerHTML = `<span class="closebtn" onclick="this.parentElement.remove();">&times;</span> 
     ${message}`;
     headerEl.after(alertEl);
     setTimeout(() => {
-      alertEl.style.display='none';
-    }, "10000");
+      alertEl.style.opacity='0';
+      alertEl.style.visibility='1';
+    }, "3000");
+    setTimeout(() => {
+      alertEl.remove()
+    }, "31000");
   }
 
   function alertSuccess(message) {
     const headerEl = myDoc.querySelector('header');
     const alertEl = myDoc.createElement('div');
-    alertEl.classList.add('alertSuccess');
-    alertEl.innerHTML = `<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+    alertEl.classList.add('alert', 'alertSuccess');
+    alertEl.innerHTML = `<span class="closebtn" onclick="this.parentElement.remove();">&times;</span> 
     ${message}`;
     headerEl.after(alertEl);
     setTimeout(() => {
-      alertEl.style.display='none';
-    }, "10000");
+      alertEl.style.opacity='0';
+      alertEl.style.visibility='1';
+    }, "3000");
+    setTimeout(() => {
+      alertEl.remove()
+    }, "31000");
   }
 
   function alertCaution(message) {
     const headerEl = myDoc.querySelector('header');
     const alertEl = myDoc.createElement('div');
-    alertEl.classList.add('alertCaution');
-    alertEl.innerHTML = `<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+    alertEl.classList.add('alert', 'alertCaution');
+    alertEl.innerHTML = `<span class="closebtn" onclick="this.parentElement.remove();">&times;</span> 
     ${message}`;
     headerEl.after(alertEl);
     setTimeout(() => {
-      alertEl.style.display='none';
-    }, "10000");
+      alertEl.style.opacity='0';
+      alertEl.style.visibility='1';
+    }, "3000");
+    setTimeout(() => {
+      alertEl.remove()
+    }, "31000");
   }
 
 let redirectURL = '';
