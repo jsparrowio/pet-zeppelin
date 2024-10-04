@@ -84,36 +84,6 @@ h2 {
     border-left: 2px solid black;
   
 }
-#cats,
-#cats img {
-    z-index: 0;
-}
-#loginbox,
-#loginbox form {
-    z-index: 1;
-}
-
-
-/* Everything between comment lines is the custom CSS I added. Feel free to play around with it or change it to fit whatever framework we decide to use */
-/* //////////////////////////////////////////////////////// */
-/* header {
-    margin-bottom: 40px;
-}
-
-#posts {
-    margin-top: 40px;
-    padding: 20px;
-    background-color:bisque;
-    width: 100%;
-    height: 70vh;
-}
-
-#postPet {
-    margin-top: 40px;
-    margin-bottom: 40px;
-} */
-/* //////////////////////////////////////////////////////////// */
-
 #mainnav a {
     margin: 1rem;
 }
