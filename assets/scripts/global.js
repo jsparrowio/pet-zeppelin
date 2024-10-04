@@ -91,7 +91,7 @@ const currentUser = checkCurrentUser();
 if (currentUser.username !== undefined) {
 const welcomeUser = currentUser.username;
 const welcomeHeader = myDoc.querySelector('#userinfo');
-welcomeHeader.innerHTML =`<span>Welcome, ${welcomeUser}!</span>`;
+welcomeHeader.innerHTML =`<div class="mr-8 mt-4">Welcome, ${welcomeUser}!</span>`;
 const logoutButton = myDoc.createElement('input')
 logoutButton.setAttribute("type", "submit");
 logoutButton.setAttribute("value", "Logout");

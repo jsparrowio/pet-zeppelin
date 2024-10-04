@@ -5,8 +5,9 @@ const passwordEl = myDoc.getElementById('loginPassword');
 
 //Event listener for clicking submit button
 loginbutton.addEventListener('click', function (event) {
-    const users = readUsers();
     event.preventDefault();
+    if (usernameEl.value !== '' && passwordEl.value !== '') {
+    const users = readUsers();
     console.log("DING");
     //TODO IF LocalStorage doesn't have an object that contains a matching username
     if (users.length > 0 && users) {
@@ -48,6 +49,10 @@ if(i === users.length){
     redirectPage('./blogpage.html')
     return;
     //GO to main page maybe make this current profile?
+}
+} else {
+    alertCaution('Please enter both a username and a password');
+    return;
 }
 });
 
