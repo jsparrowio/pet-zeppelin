@@ -25,39 +25,36 @@ bg-gradient-to-r from-thelightblue to-thedarkblue via-themediumblue1
         <a href="./blogpage.html">Feed</a>
     </nav>
 </header>
-<div class="postTable
-        border-4 border-thepurple bg-gradient-to-l from-thelightblue to-themediumestblue
-        text-white items-center
-    ">
-    <form>
-        <table id="collapseTable" class="
-            m-auto collapse
-        ">
-            <div class="postDropdown">
-                <p>Post your pet!</p> <button type="button" id="expandTable" class="
-                border-2 rounded-full bg-gradient-to-r from-themediumblue1 to-themediumblue2 via-thelightblue
-                ">Expand</button>
-                <tr>
-                    <td>It's not a post, it's a Blimp™!</td>
-                    <td><button type="submit" id="postSubmit" class="border-2 rounded-xl px-20">Post!</button></td>
-                </tr>
+<aside class="postHover fixed bottom-12 left-20 bg-cyan-500 border-2 border-thepurple rounded-xl p-6">
+    <h2 class="text-xl">Post Your Pet</h2>
+    <button type="button" id="modalBtn" class="border-2 rounded-xl bg-backgroundblue border-white text-thepurple">Okay!</button>
+</aside>
+<div class="postYourPet border-b-4 border-thepurple bg-cyan-500 text-white">
+    <h1 class="text-6xl border-b-2 mx-52 text-thepurple">Your Feed</h1>
+</div> 
+    <div id="postModal" class="modal">
+        <div class="modal-content shadow-2xl bg-gradient-to-l from-themediumblue1 to-thedarkblue via-themediumblue2">
+            <span class="modalClose" id="modalClose">&times;</span>
+            <div class="postIntro border-b-4 border-thepurple ">
+                <p class="text-white">Post Your Pet!</p>
+                <h2>Image hosting currently unavailable, please provide a static link.</h2>
             </div>
-            <div>
-                <tr>
-                    <td>Title:</td>
-                    <td><input type="text" value="Woof Woof!" id="postTitle" class="text-thepurple rounded-md mb-2"></td>
-                </tr>
-                <tr>
-                    <td>Your Pet!</td>
-                    <td><input type="text" value="Please use a static link!" id="postImage" class="text-thepurple rounded-md mb-2"></td>
-                </tr>
-                <tr>
-                    <td>What's Up?</td>
-                    <td><input type="text" id="postContent" class="text-thepurple rounded-md mb-2"></td>
-                </tr>
-            </div>
-        </table>
-    </form>
+            <form>
+                <div>
+                    <label for="postTitle" class="text-white">Title:</label>
+                    <input type="text" id="postTitle" class="bg-backgroundblue text-thepurple rounded-md mb-2 mt-2">
+                </div>
+                <div>
+                    <label for="postImage" class="text-white">Image:</label>
+                    <input type="text" id="postImage" class="bg-backgroundblue text-thepurple rounded-md mb-2">
+                </div>
+                <div>
+                    <label for="postContent" class="text-white">What's Up?</label>
+                    <input type="textbox" id="postContent" class="bg-backgroundblue text-thepurple rounded-md mb-2">
+                </div>
+                <button type="submit" id="postSubmit" class="border-2 rounded-xl px-40 hover:animate-pulse bg-gradient-to-r from-thedarkblue to-themediumblue2 via-cyan500">Post!</button>
+            </form>
+        </div>
     </div>
     <div id="postsDiv"></div>
         <div id="posts" class="visible px-52">
