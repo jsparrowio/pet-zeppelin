@@ -77,7 +77,7 @@ function buildPost(bp) {
     textBlockEl.setAttribute('class',"bg-backgroundblue rounded-xl");
     userEl.setAttribute('class',"text-themediumblue1");
     titleEl.setAttribute('class',"bg-thepurple text-white rounded-xl text-xl");
-    contentEl.setAttribute('class',"px-24 py-6 border-t-2 mx-6 text-lg");
+    contentEl.setAttribute('class',"px-1 py-6 border-t-2 mx-auto text-lg sm:text-small");
     //append everything together
     articleEl.appendChild(imgEl);
     textBlockEl.appendChild(userEl);
