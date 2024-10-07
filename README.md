@@ -1,6 +1,6 @@
 #   Table of Contents
 1.  [Introduction](#Pet-Zeppelin)
-2.  [Screenshots](#gaze-upon-its-glory)
+2.  [Screenshots](#screenshots)
 3.  [Application Description](#description)
 4.  [Development Tools](#development-tools)
 5.  [Application Content](#content)
@@ -20,8 +20,10 @@ And the GitHub is at -
 
 https://github.com/jsparrowio/pet-zeppelin
 
-#   Gaze Upon It's Glory
-<img src="./assets/images/loginpage1001.png" width="640" height="360">
+#   Screenshots
+
+<img src="./assets/images/login.png" width="640" height="360">
+<img src="./assets/images/blogpage.png" width="640" height="360">
 
 #   Description
 
@@ -39,13 +41,13 @@ Pet Zeppelin begins with an exisiting database of posts and adorable photographs
 
 Index.html exists solely as a redirect page. Upon loading, it executes a script that will direct the user to create an account or to their profile, as appropriate. It uses index.js.
 
-Global.js contains global variable (only one, promise) and global functions.
+Global.js contains the only global variable, and global functions for use in other scripts.
 
 Proilepage.html is paired with profile.js to function as the "introductory" page for the soon-to-be pet blogger.
 
-Blogpage.html and blog.js combine their powers to allow the user to both post and read blog entries.
+Blogpage.html and blog.js handle the posting and storage functions, allow the user to both post and read blog entries.
 
-Tailwind.config, surprisingly, contains the Tailwind configuration.
+Tailwind.config contains resources for Tailwind CSS.
 
 Dummyposts.JSON is the database of prepopulated posts.
 
@@ -55,4 +57,4 @@ Pet Zepplin is released under the MIT license.
 
 #   Credits
 
-Pet Zeppelin is brought to you by the incredibly handsome geniuses Josh Garrett, Lucas Hallman, Matt O'AbbreviatesHisNameinSlack, and Zachary LaCore. It was also brought to you by Zachary Lynch, who proves the theory about monkeys with typewriters.
+Pet Zeppelin is brought to you by Josh Garrett, Lucas Hallman, Matt Oberdalhoff, Zachary LaCore, and Zachary Lynch.
