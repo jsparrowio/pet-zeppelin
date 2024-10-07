@@ -1,20 +1,11 @@
 
-const setBtn = myDoc.getElementById("settingsDropdownBtn")
-const setLi = myDoc.getElementById("setList");
-const editButton = myDoc.getElementById("editAboutMe");
-const editBox = myDoc.getElementById("editBox");
-const aboutMe = myDoc.getElementById("aboutMeBox");
-const newAM = myDoc.getElementById("editAMBox");
-const submitAMbutton = myDoc.getElementById('submitAM');
-
-const renderAM = function() {
-  
-  const AMEl = myDoc.createElement('h2');
-  AMEl.textContent = JSON.parse(localStorage.getItem('About Me'));
-  aboutMe.appendChild(AMEl);
-
-}
-renderAM;
+// setBtn.addEventListener("click", function () {
+//   if (setLi.class === "hidden"){
+//     setLi.class = "block" 
+//   } else if (setLi.class === "block") {
+//     setLi.class = "hidden";
+//   }
+// })
 
 let showEditBox = false;
 const editToggle = function (event) {
