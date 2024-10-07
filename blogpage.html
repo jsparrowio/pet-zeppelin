@@ -4,43 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Feed - PetZeppelin!</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./assets/scripts/tailwind.config"></script>
-
-    <title>Pet Zeppelin Blog Page</title>
 </head>
 
 <body class="
 bg-backgroundblue
 ">
-<header id="mainheader" class="flex flex-row justify-center bg-gradient-to-r from-cyan-500 to-blue-500 border-b-4">
-    <nav id = "mainnav" class="flex flex-auto self-end text-barelyblue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-        <a href="./profilepage.html" class="hover:bg-sky-700">Profile</a>
-    </nav>
-    <div class="logo flex flex-auto self-center bg-contain bg-no-repeat w-24 h-20 ml-28" style="background-image: url(./assets/images/logo.png);">
-        <h1 class ="ml-7 justify-end self-end font-bold font-thefontestfont text-barelyblue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">PetZeppelin</h1>
-    </div>
-    <div class ="infoContainer" class="flex-auto justify-end align-end self-end">
-    <div id = "userinfo" class="flex-column justify-end align-end self-end text-barelyblue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+    <header id="mainheader" class="flex flex-row justify-center bg-gradient-to-r from-cyan-500 to-blue-500 border-b-4">
+        <nav id="mainnav" class="flex flex-auto self-end text-barelyblue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+            <a href="./profilepage.html" class="hover:bg-sky-700">Profile</a>
+        </nav>
+        <div class="logo flex flex-auto self-center bg-contain bg-no-repeat w-24 h-20"
+            style="background-image: url(./assets/images/logo.png);">
+            <h1
+                class="ml-7 justify-end self-end font-bold font-thefontestfont text-barelyblue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+                PetZeppelin</h1>
+        </div>
+        <div class="infoContainer" class="flex-auto justify-end align-end self-end">
+            <div id="userinfo"
+                class="flex-column justify-end align-end self-end text-barelyblue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
 
-        <div class="mr-8 mt-4">Welcome! Please log in!</span>
+                <div class="mr-8 mt-4">Welcome! Please log in!</span>
+                </div>
+            </div>
+    </header>
+    <aside class="postHover fixed bottom-12 left-20 bg-cyan-500 border-2 border-thepurple rounded-xl p-6 z-10">
+        <h2 class="text-xl font-thefontestfont text-barelyblue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Post Your
+            Pet</h2>
+        <button type="button" id="modalBtn"
+            class="border-2 rounded-xl bg-backgroundblue border-white text-thepurple">Okay!</button>
+    </aside>
+    <div class="postYourPet border-b-4 border-thepurple bg-cyan-500 text-white">
+        <h1
+            class="text-6xl border-b-2 mx-12 text-thepurple text-center font-thefontestfont drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+            Your Feed</h1>
     </div>
-    </div>
-</header>
-<aside class="postHover fixed bottom-12 left-20 bg-cyan-500 border-2 border-thepurple rounded-xl p-6 z-10">
-    <h2 class="text-xl">Post Your Pet</h2>
-    <button type="button" id="modalBtn" class="border-2 rounded-xl bg-backgroundblue border-white text-thepurple">Okay!</button>
-</aside>
-<div class="postYourPet border-b-4 border-thepurple bg-cyan-500 text-white">
-    <h1 class="text-6xl border-b-2 mx-12 text-thepurple text-center">Your Feed</h1>
-</div> 
     <div id="postModal" class="modal">
         <div class="modal-content shadow-2xl bg-gradient-to-l from-themediumblue1 to-thedarkblue via-themediumblue2">
-            <span class="modalClose" id="modalClose">&times;</span>
+            <span class="modalClose" id="closeModal">&times;</span>
             <div class="postIntro border-b-4 border-thepurple ">
-                <p class="text-white">Post Your Pet!</p>
+                <p class="font-thefontestfont text-barelyblue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Post Your
+                    Pet!</p>
                 <h2>Image hosting currently unavailable, please provide a static link.</h2>
             </div>
             <form>
@@ -54,32 +62,25 @@ bg-backgroundblue
                 </div>
                 <div>
                     <label for="postContent" class="text-white">What's Up?</label>
-                    <input type="textbox" id="postContent" class="bg-backgroundblue text-thepurple rounded-md mb-2">
+                    <br>
+                    <textarea id="postContent"
+                        class="peer h-full min-h-[100px] w-96 resize-none bg-backgroundblue text-thepurple rounded-md mb-2"></textarea>
                 </div>
-                <button type="submit" id="postSubmit" class="border-2 rounded-xl px-40 hover:animate-pulse bg-gradient-to-r from-thedarkblue to-themediumblue2 via-cyan500">Post!</button>
+                <button type="submit" id="postSubmit"
+                    class="border-2 rounded-xl px-40 hover:animate-pulse bg-gradient-to-r from-thedarkblue to-themediumblue2 via-cyan500 font-thefontestfont text-barelyblue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Post!</button>
             </form>
         </div>
     </div>
     <div id="postsDiv"></div>
-        <div id="posts" class="visible px-12">
-            <!-- <article class="
-            scale-75
-            m-auto border-4 border-thepurple rounded-xl shadow-2xl
-            bg-gradient-to-l from-thelightblue to-themediumblue2 via-themediumblue1
-            ">
-                <img src="https://i.ibb.co/cXPpCtX/rio-Profile.jpg" alt="rio-Profile" class="m-auto border-1 rounded-xl">
-                <div class="bg-backgroundblue rounded-xl">
-                    <h3 class="text-themediumblue1">Lauren J Ipsum</h3>
-                    <h2 class="bg-thepurple text-white rounded-xl text-xl">Lorem ipsum dolor sit amet</h2>
-                    <blockquote class="px-24 py-6 border-t-2 mx-6 text-lg">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</blockquote>
-                </div>
-            </article> -->
-        </div>
+    <div id="posts" class="visible px-12">
+    </div>
 </body>
-<footer class = "bg-gradient-to-r from-cyan-500 to-blue-500 border-b-4">
-    <p>&copy; 2024</p>
+<footer class="m-auto bg-gradient-to-r from-cyan-500 to-blue-500 border-t-4 z-20">
+    <br>
+    <p class="text-white font-thefontestfont text-base">Made with ❤️</p>
+    <p class="text-white font-thefontestfont text-base">&copy; 2024</p>
 </footer>
 <script src="./assets/scripts/global.js"></script>
-<script src="./assets/scripts/dummyposts.js"></script>
 <script src="./assets/scripts/blog.js"></script>
+
 </html>

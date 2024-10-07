@@ -1,3 +1,6 @@
+/* 
+!!! This entire script is a work in progress for future development, please ignore for now !!!
+*/
 
 // setBtn.addEventListener("click", function () {
 //   if (setLi.class === "hidden"){
@@ -33,30 +36,6 @@ const submitAM = function (event) {
 }};
 
 submitAMbutton.addEventListener('click', submitAM);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // const blimpBtn = myDoc.getElementById('postPet');
 // const postsDiv = myDoc.getElementById('posts');

@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In - PetZeppelin!</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./assets/scripts/tailwind.config"></script>
 </head>
+
 <body class="
     bg-gradient-to-t from-backgroundblue to-barelyblue via-thelightestblue
 ">
     <header id="mainheader" class="flex flex-row justify-center bg-gradient-to-r from-cyan-500 to-blue-500 border-b-4">
-        <nav id = "mainnav" class="flex flex-auto self-end text-barelyblue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+        <nav id="mainnav" class="flex flex-auto self-end text-barelyblue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
         </nav>
-        <div class="logo flex flex-auto self-center bg-contain bg-no-repeat w-24 h-20 ml-48" style="background-image: url(./assets/images/logo.png);">
-            <h1 class ="ml-7 justify-end self-end font-bold font-thefontestfont text-barelyblue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">PetZeppelin</h1>
+        <div class="logo flex flex-auto self-center bg-contain bg-no-repeat w-24 h-20 ml-48"
+            style="background-image: url(./assets/images/logo.png);">
+            <h1
+                class="ml-7 justify-end self-end font-bold font-thefontestfont text-barelyblue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+                PetZeppelin</h1>
         </div>
-        <div class ="infoContainer" class="flex-auto justify-end align-end self-end">
-        <div id = "userinfo" class="flex-column justify-end align-end self-end text-barelyblue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-            <div class="mr-8 mt-4">Welcome! Please log in!</span>
-        </div>
-        </div>
+        <div class="infoContainer" class="flex-auto justify-end align-end self-end">
+            <div id="userinfo"
+                class="flex-column justify-end align-end self-end text-barelyblue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+                <div class="mr-8 mt-4">Welcome! Please log in!</span>
+                </div>
+            </div>
     </header>
     <br>
     <br>
@@ -33,14 +38,15 @@
     ">
         <!-- floating flex panel for login submission-->
         <div class="flex-none" id="cats">
-            <img src="./assets/images/omgcats.png" alt="3 Cats looking very suprised that you haven't signed up for PetZeppelin!"
-            id="omgcats" class="
+            <img src="./assets/images/omgcats.png"
+                alt="3 Cats looking very suprised that you haven't signed up for PetZeppelin!" id="omgcats" class="
                 absolute scale-75 bottom-0 left-0 -mb-12 z-0
-            " >
-            <img src="./assets/images/omgcats1.png" alt="3 Cats looking absolutely bewildered that you haven't signed up and posted your pet on PetZeppelin!"
-            id="omgcats1" class="
+            ">
+            <img src="./assets/images/omgcats1.png"
+                alt="3 Cats looking absolutely bewildered that you haven't signed up and posted your pet on PetZeppelin!"
+                id="omgcats1" class="
                 absolute scale-75 bottom-0 right-0 -mb-12 z-0
-            " >
+            ">
         </div>
         <div id="loginbox" class="
                     flex-none scale-150 basis-72 m-auto w-64
@@ -51,7 +57,8 @@
                     ">
             <aside>
                 <img src="./assets/images/logo.png" alt="the PetZeppelin logo">
-                <p>Welcome to the Dog House.</p>
+                <p class="font-thefontestfont text-barelyblue drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Welcome to
+                    the Dog House</p>
             </aside>
             <form>
                 <label for="loginUsername" class="text-white">Username:</label>
@@ -79,11 +86,13 @@
     <br>
     <br>
     <br>
-    <footer class = "m-auto bg-gradient-to-r from-cyan-500 to-blue-500 border-t-4 z-20">
+    <footer class="m-auto bg-gradient-to-r from-cyan-500 to-blue-500 border-t-4 z-20">
         <br>
-        <p>&copy; 2024</p>
+        <p class="text-white font-thefontestfont text-base">Made with ❤️</p>
+        <p class="text-white font-thefontestfont text-base">&copy; 2024</p>
     </footer>
     <script src="./assets/scripts/global.js"></script>
     <script src="./assets/scripts/login.js"></script>
 </body>
+
 </html>
