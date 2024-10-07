@@ -1,9 +1,14 @@
-let currentUser = JSON.parse(localStorage.getItem(`currentUser`));
+// send user to the correct page they should be on based on the parameters in the function
+sendUser();
 
-// Checking if user exists in local storage
+function sendUser() {
+    let currentUser = JSON.parse(localStorage.getItem(`currentUser`));
 
-if (currentUser && currentUser.username) {
-    window.location.href = `./blogpage.html`
-} else {
-    window.location.href = `./login.html`
+    // Checking if user exists in local storage
+
+    if (currentUser && currentUser.username) {
+        window.location.href = `./blogpage.html`
+    } else {
+        window.location.href = `./login.html`
+    }
 }

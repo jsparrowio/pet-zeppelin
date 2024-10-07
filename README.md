@@ -16,7 +16,7 @@ Pet Zeppelin can be visited at -
 
 https://jsparrowio.github.io/pet-zeppelin/
 
-And the GitHub is at -
+And the GitHub repo is at -
 
 https://github.com/jsparrowio/pet-zeppelin
 
@@ -31,29 +31,30 @@ When opening the initial page, the user will be presented with a login screen. U
 
 #   Development Tools
 
-Pet Zeppelin uses HTML, Tailwind CSS, and Javascript. It utilizes the user's local storage for storing user and post information. It should be compatible with all modern, mainstream browsers without any outside dependencies.
+Pet Zeppelin uses HTML, Tailwind CSS, and JavaScript. It utilizes the user's local storage for storing user and post information. It should be compatible with all modern, mainstream browsers without any outside dependencies.
 
 #   Content
 
-Pet Zeppelin begins with an exisiting database of posts and adorable photographs of beloved pets. All user-generated content is stored as .JSON files, and image links utilize outside URLs.
+Pet Zeppelin begins with an exisiting database of posts and adorable photographs of beloved pets. All user-generated content is stored as JSON stringified data in local storage, and image links utilize outside URLs.
 
 #   File Details
 
 Index.html exists solely as a redirect page. Upon loading, it executes a script that will direct the user to create an account or to their profile, as appropriate. It uses index.js.
 
-Global.js contains the only global variable, and global functions for use in other scripts.
+Global.js contains the only global variable used across the entire site, and global functions for use in other scripts.
 
-Proilepage.html is paired with profile.js to function as the "introductory" page for the soon-to-be pet blogger.
+Proilepage.html is paired with profile.js to function as the "introductory" page for the soon-to-be pet blogger. Note: This page is currently a future development plan for true functionality.
 
 Blogpage.html and blog.js handle the posting and storage functions, allow the user to both post and read blog entries.
 
 Tailwind.config contains resources for Tailwind CSS.
 
-Dummyposts.JSON is the database of prepopulated posts.
+Dummyposts.js is the database of prepopulated posts.
 
 #   License
 
-Pet Zepplin is released under the MIT license.
+Pet Zepplin is released under the MIT license.\
+See LICENSE for more information.
 
 #   Credits
 
