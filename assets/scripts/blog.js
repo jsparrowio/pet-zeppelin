@@ -3,6 +3,9 @@ const submitButton = document.getElementById('postSubmit');
 const expandButton = document.getElementById('expandTable');
 const expandTable = document.getElementById('collapseTable');
 const populateDummies = true; // SET TO FALSE IF YOU WANT TO REMOVE DUMMY POSTS
+const imgSubmit = document.getElementById('postImage');
+const titleSubmit = document.getElementById('postTitle');
+const contentSubmit = document.getElementById('postContent');
 const dummyposts = [
     {
         "image": "https://i.ibb.co/cXPpCtX/rio-Profile.jpg",
@@ -16,11 +19,11 @@ const dummyposts = [
         "title": "Two silly Dogs",
         "content": "Two knuckleheads laying down nose to nose. They're just tuckered out from a long day of doing nothing at all."
         },
-    {
-        "image": "https://i.ibb.co/8B3CRpV/gonzo1.jpg",
-        "username": "jsparrowio",
-        "title": "i iz tired",
-        "content": "i iz so tired, i take nap now. gooodddniggghttt"
+        {
+            "image": "https://i.ibb.co/8B3CRpV/gonzo1.jpg",
+            "username": "jsparrowio",
+            "title": "i iz tired",
+            "content": "i iz so tired, i take nap now. gooodddniggghttt"
         }
 ]
 function renderPosts(){
@@ -38,22 +41,18 @@ function renderPosts(){
 
 function submitPost(event) {
     console.log('HIT');
-    event.preventDefault();
     const currentUser = checkCurrentUser();
     const formEl = document.querySelector('form');
     //create a new post by populating an object with parameters
-    const imgSubmit = document.getElementById('postImage');
-    const titleSubmit = document.getElementById('postTitle');
-    const contentSubmit = document.getElementById('postContent');
-
     const blogPost = {
         image: imgSubmit.value,
         username: currentUser.username,
         title: titleSubmit.value,
         content: contentSubmit.value
     };
-
+    //store the new post in the list of posts. This doesn't update the currently rendered posts...
     storePost(blogPost);
+    //...so we append the new post to the top of the feed and clear the form.
     buildPost(blogPost);
     formEl.reset();
 };
@@ -96,6 +95,7 @@ function buildPost(bp) {
 
 let tableShow = false;
 
+//function for expanding the modal
 function expandForm(event) {
     event.preventDefault();
     if (tableShow) {
@@ -108,13 +108,19 @@ function expandForm(event) {
         console.log('TABLESHOW TRUE');
     }
 };
-
+// This renders posts in the post object in local storage to populate the feed on page load
 renderPosts();
 
-submitButton.addEventListener('click', submitPost);
-
+submitButton.addEventListener('click', function(event){
+    if(imgSubmit.value && titleSubmit.value && contentSubmit.value){
+        console.log("submitting post...");
+        submitPost(event);
+    } else {
+        event.preventDefault();
+        alertCaution("Please fill out all fields!");
+    }
+});
 //Modal js
-
 //modal refs
 const modal = document.getElementById('postModal');
 const modalbtn = document.getElementById('modalBtn');
@@ -128,12 +134,10 @@ modalClose.onclick = function () {
     modal.style.display = "none";
 };
 
+//when the user clicks the x, close modal
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
 };
 
-//when the user clicks the x, close modal
-
-//when the user clicks out of the modal, close modal
